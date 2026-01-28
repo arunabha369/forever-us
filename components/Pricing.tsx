@@ -24,7 +24,7 @@ const Pricing = () => {
         },
         {
             name: "The Forever Gift",
-            price: "₹2,999",
+            price: "₹499",
             period: "one-time",
             description: "The perfect digital gift. A beautiful website that stays online forever.",
             features: [
@@ -36,24 +36,25 @@ const Pricing = () => {
                 "Gift wrap animation reveal"
             ],
             cta: "Create Gift",
-            variant: "primary",
-            popular: true
-        },
-        {
-            name: "Annual Memory",
-            price: "₹1,499",
-            period: "/year",
-            description: "Great for anniversaries where you want to add new memories each year.",
-            features: [
-                "Everything in Forever",
-                "Yearly reminder emails",
-                "Priority support",
-                "50GB Storage",
-                "4K Video support"
-            ],
-            cta: "Choose Annual",
             variant: "secondary",
             popular: false
+        },
+        {
+            name: "The Eternal Bond",
+            price: "₹1,999",
+            period: "one-time",
+            description: "Our ultimate premium experience for the most special love stories.",
+            features: [
+                "Everything in Forever",
+                "4K Video Quality",
+                "Priority VIP Support",
+                "AI Vows & Story Writer",
+                "Analytics Dashboard",
+                "Dedicated Design Concierge"
+            ],
+            cta: "Get Ultimate Access",
+            variant: "primary",
+            popular: true
         }
     ];
 
