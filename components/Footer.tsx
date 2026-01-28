@@ -6,7 +6,7 @@ import { Heart, Instagram, Twitter, Facebook } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className="bg-white border-t border-gray-100 py-12">
+        <footer className="py-12 border-t border-white/40 bg-white/20 backdrop-blur-md relative z-10">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div className="space-y-4">

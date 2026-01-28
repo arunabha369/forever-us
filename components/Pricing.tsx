@@ -58,7 +58,7 @@ const Pricing = () => {
     ];
 
     return (
-        <section id="pricing" className="py-24 bg-white relative overflow-hidden">
+        <section id="pricing" className="py-24 relative z-10 overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
 
@@ -84,7 +84,7 @@ const Pricing = () => {
                                 </div>
                             )}
                             <Card
-                                className={`p-8 h-full flex flex-col ${plan.popular ? 'border-rose-200 shadow-xl bg-white scale-100 ring-4 ring-rose-50/50' : 'bg-white/50 border-gray-100 hover:border-rose-100'}`}
+                                className={`p-8 h-full flex flex-col ${plan.popular ? 'border-rose-200 shadow-xl bg-white/60 scale-100 ring-4 ring-rose-50/50 backdrop-blur-md' : 'bg-white/40 border-white/50 hover:bg-white/60 backdrop-blur-sm'}`}
                                 variant="default"
                                 hoverEffect={true}
                             >

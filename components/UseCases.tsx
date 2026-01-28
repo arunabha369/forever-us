@@ -52,7 +52,7 @@ const UseCases = () => {
     ];
 
     return (
-        <section id="use-cases" className="py-24 bg-white relative">
+        <section id="use-cases" className="py-24 relative z-10">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">
@@ -67,7 +67,7 @@ const UseCases = () => {
                     {useCases.map((useCase, index) => (
                         <Card
                             key={useCase.title}
-                            className="p-6 border-white/50 bg-white/50 hover:bg-white"
+                            className="p-6 border-white/40 bg-white/40 backdrop-blur-md hover:bg-white/60 shadow-lg"
                             hoverEffect={true}
                         >
                             <div className="mb-4 p-3 rounded-2xl bg-rose-50 w-fit">

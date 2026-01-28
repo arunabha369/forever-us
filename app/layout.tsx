@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
+        <div className="fixed inset-0 pointer-events-none select-none">
+          {/* Texture overlay handled in CSS */}
+        </div>
         {children}
       </body>
     </html>

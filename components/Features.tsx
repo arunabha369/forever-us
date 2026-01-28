@@ -58,7 +58,7 @@ const Features = () => {
     ];
 
     return (
-        <section className="py-24 bg-gradient-to-b from-white to-rose-50/50">
+        <section className="py-24 relative z-10">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
                     <div className="inline-block px-4 py-1.5 rounded-full bg-rose-100 text-rose-600 font-bold text-xs tracking-widest uppercase mb-4">
@@ -82,7 +82,7 @@ const Features = () => {
                             transition={{ delay: index * 0.05 }}
                         >
                             <Card
-                                className="p-6 h-full flex flex-col hover:border-rose-200 transaction-colors duration-300"
+                                className="p-6 h-full flex flex-col hover:bg-white/60 bg-white/30 backdrop-blur-md border-white/40 shadow-sm hover:shadow-lg transition-all duration-300"
                                 variant="default"
                             >
                                 <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-4 shadow-lg`}>

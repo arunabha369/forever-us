@@ -1,17 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fff5f7;
-  /* Very light warm pink/white */
-  --foreground: #4a0418;
-  /* Deep burgundy text */
+  --background: #fff1f5;
+  --foreground: #2b2b2b;
+  /* Soft dark gray, not black */
 
   /* Brand Colors - Deep Romance */
   --rose-100: #ffdce5;
   --rose-200: #ffb8ca;
+  --rose-300: #fda4af;
   --rose-400: #fb7185;
   --rose-500: #e11d48;
-  /* Passionate Red/Pink */
   --rose-600: #be123c;
   --rose-900: #881337;
 
@@ -19,22 +18,22 @@
   --peach-200: #fed7aa;
 
   --lavender-100: #faf5ff;
-  /* Softest lavender background mix */
   --lavender-500: #a855f7;
 }
 
 @theme inline {
   /* Fonts */
   --font-display: var(--font-playfair), serif;
-  /* Changed to Serif */
   --font-body: var(--font-inter), sans-serif;
 
   /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
+  /* Extend Colors */
   --color-rose-100: var(--rose-100);
   --color-rose-200: var(--rose-200);
+  --color-rose-300: var(--rose-300);
   --color-rose-400: var(--rose-400);
   --color-rose-500: var(--rose-500);
   --color-rose-600: var(--rose-600);
@@ -47,8 +46,10 @@
   --color-lavender-500: var(--lavender-500);
 
   /* Animation durations */
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-float-delayed: float 8s ease-in-out 4s infinite;
+  --animate-heartbeat: heartbeat 2s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -70,13 +71,52 @@
     transform: scale(1);
   }
 
+  15% {
+    transform: scale(1.15);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.15);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
   50% {
+    opacity: 0.8;
     transform: scale(1.05);
   }
 }
 
 body {
-  background: var(--background);
+  /* The requested main background gradient */
+  background: linear-gradient(to bottom,
+      #fff1f5 0%,
+      /* Soft pink start */
+      #fde2e4 25%,
+      /* Peach hint */
+      #fbc2eb 50%,
+      /* Lavender hint */
+      #e0c3fc 75%,
+      /* Deeper purple/blue hint */
+      #fef6ff 100%
+      /* Fade to white/lilac */
+    );
+  min-height: 100vh;
   color: var(--foreground);
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -92,8 +132,8 @@ body::before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.5;
   z-index: 50;
   mix-blend-mode: overlay;
 }
@@ -106,16 +146,22 @@ h5,
 h6 {
   font-family: var(--font-display);
   font-weight: 700;
-  /* Bolder serif headings */
+  color: #1a1a1a;
 }
 
-/* Glassmorphism Utilities - Softer, warmer */
+/* Premium Glassmorphism Utilities */
 .glass {
-  @apply backdrop-blur-md bg-white/40 border border-white/60;
+  @apply backdrop-blur-xl bg-white/30 border border-white/40 shadow-sm;
 }
 
 .glass-card {
-  @apply backdrop-blur-xl bg-white/70 border border-rose-100/50 shadow-xl shadow-rose-200/20 transition-all duration-500 hover:bg-white/80;
+  @apply backdrop-blur-xl bg-white/35 border border-white/50 shadow-lg shadow-rose-900/5 transition-all duration-500 hover:bg-white/50 hover:shadow-xl hover:-translate-y-1;
+}
+
+.glass-panel {
+  background: radial-gradient(120% 154% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.1) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* Text selections */

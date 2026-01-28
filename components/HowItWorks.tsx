@@ -28,7 +28,7 @@ const HowItWorks = () => {
     ];
 
     return (
-        <section className="py-24 bg-rose-50/30 relative overflow-hidden">
+        <section className="py-24 relative overflow-hidden z-10">
             {/* Background blobs */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-rose-200/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
@@ -56,7 +56,7 @@ const HowItWorks = () => {
                             transition={{ delay: index * 0.2, duration: 0.5 }}
                             className="flex-1 w-full max-w-sm"
                         >
-                            <Card className="text-center p-8 bg-white/60 hover:bg-white border-white/80 h-full flex flex-col items-center">
+                            <Card className="text-center p-8 bg-white/40 hover:bg-white/60 border-white/60 backdrop-blur-md h-full flex flex-col items-center">
                                 <div className="w-16 h-16 rounded-full bg-rose-100 flex items-center justify-center mb-6 shadow-md shadow-rose-100 relative group">
                                     {step.icon}
                                     <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-white border border-rose-100 flex items-center justify-center font-bold text-rose-600 text-sm shadow-sm">
