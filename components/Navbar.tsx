@@ -68,11 +68,15 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex items-center gap-3">
-                            <Button variant="ghost" size="sm">Login</Button>
-                            <Button variant="primary" size="sm" className="shadow-rose-200">
-                                <Sparkles className="w-4 h-4 mr-2" />
-                                Start Creating
-                            </Button>
+                            <Link href="/">
+                                <Button variant="ghost" size="sm">Login</Button>
+                            </Link>
+                            <Link href="/create">
+                                <Button variant="primary" size="sm" className="shadow-rose-200">
+                                    <Sparkles className="w-4 h-4 mr-2" />
+                                    Start Creating
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
@@ -109,8 +113,12 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className="h-px bg-gray-100 w-full" />
-                    <Button variant="ghost" className="justify-start">Login</Button>
-                    <Button variant="primary" className="justify-center">Start Creating</Button>
+                    <Link href="/">
+                        <Button variant="ghost" className="justify-start w-full">Login</Button>
+                    </Link>
+                    <Link href="/create">
+                        <Button variant="primary" className="justify-center w-full">Start Creating</Button>
+                    </Link>
                 </motion.div>
             )}
         </>

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import BackgroundElements from "@/components/BackgroundElements";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -25,12 +28,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground selection:bg-rose-100 selection:text-rose-900`}
       >
+        <BackgroundElements />
+        <Navbar />
         <div className="fixed inset-0 pointer-events-none select-none">
           {/* Texture overlay handled in CSS */}
         </div>
-        {children}
+        <main className="min-h-screen pt-20">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
