@@ -25,7 +25,7 @@ const CTA = () => {
                         <Heart className="w-6 h-6 text-rose-300 fill-rose-300 animate-pulse" />
                     </div>
 
-                    <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tight">
+                    <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tight text-white">
                         One day, these memories <br /> will mean everything.
                     </h2>
 
