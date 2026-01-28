@@ -9,7 +9,7 @@ const Pricing = () => {
     const plans = [
         {
             name: "Free Preview",
-            price: "$0",
+            price: "₹0",
             description: "Design your site and see how it looks. Pay only when you're ready to share.",
             features: [
                 "Access to all templates",
@@ -24,7 +24,7 @@ const Pricing = () => {
         },
         {
             name: "The Forever Gift",
-            price: "$49",
+            price: "₹2,999",
             period: "one-time",
             description: "The perfect digital gift. A beautiful website that stays online forever.",
             features: [
@@ -41,7 +41,7 @@ const Pricing = () => {
         },
         {
             name: "Annual Memory",
-            price: "$29",
+            price: "₹1,499",
             period: "/year",
             description: "Great for anniversaries where you want to add new memories each year.",
             features: [

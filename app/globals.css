@@ -155,7 +155,7 @@ h6 {
 }
 
 .glass-card {
-  @apply backdrop-blur-xl bg-white/35 border border-white/50 shadow-lg shadow-rose-900/5 transition-all duration-500 hover:bg-white/50 hover:shadow-xl hover:-translate-y-1;
+  @apply backdrop-blur-md bg-white/40 border border-white/50 shadow-lg shadow-rose-900/5 transition-all duration-500 hover:bg-white/50 hover:shadow-xl hover:-translate-y-1;
 }
 
 .glass-panel {
