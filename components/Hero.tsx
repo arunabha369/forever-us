@@ -56,7 +56,7 @@ const Hero = () => {
                                 <ArrowRight className="w-4 h-4 ml-2" />
                             </Button>
                         </Link>
-                        <Link href="#templates">
+                        <Link href="https://forever-us-template-one.vercel.app/" target="_blank">
                             <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                                 <PlayCircle className="w-4 h-4 mr-2" />
                                 View Templates

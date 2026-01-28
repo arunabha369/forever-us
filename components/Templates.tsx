@@ -47,9 +47,11 @@ const Templates = () => {
                             Each design is built to tell a story. Choose the one that feels like you.
                         </p>
                     </div>
-                    <Button variant="outline" className="shrink-0 hidden md:flex">
-                        View All Templates <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <a href="https://forever-us-template-one.vercel.app/" target="_blank" className="hidden md:flex shrink-0">
+                        <Button variant="outline">
+                            View All Templates <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                    </a>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -82,10 +84,12 @@ const Templates = () => {
 
                                 {/* Hover Overlay */}
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-[2px] z-30">
-                                    <Button variant="shine" size="lg">
-                                        <Eye className="mr-2 w-4 h-4" />
-                                        Preview
-                                    </Button>
+                                    <a href="https://forever-us-template-one.vercel.app/" target="_blank">
+                                        <Button variant="shine" size="lg">
+                                            <Eye className="mr-2 w-4 h-4" />
+                                            Preview
+                                        </Button>
+                                    </a>
                                 </div>
 
                                 {/* Label */}
@@ -99,9 +103,11 @@ const Templates = () => {
                 </div>
 
                 <div className="mt-8 text-center md:hidden">
-                    <Button variant="outline" className="w-full">
-                        View All Templates <ArrowRight className="ml-2 w-4 h-4" />
-                    </Button>
+                    <a href="https://forever-us-template-one.vercel.app/" target="_blank" className="w-full inline-block">
+                        <Button variant="outline" className="w-full">
+                            View All Templates <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                    </a>
                 </div>
             </div>
         </section>
