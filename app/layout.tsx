@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${inter.variable} antialiased bg-background text-foreground`}
+        className={`${playfair.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
         {children}
       </body>

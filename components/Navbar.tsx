@@ -28,7 +28,7 @@ const Navbar = () => {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
                     isScrolled
-                        ? "bg-white/70 backdrop-blur-xl border-white/40 py-3 shadow-sm"
+                        ? "bg-white/60 backdrop-blur-xl border-white/60 py-3 shadow-sm"
                         : "bg-transparent border-transparent py-5"
                 )}
                 initial={{ y: -100 }}
@@ -48,7 +48,7 @@ const Navbar = () => {
                                 <Heart className="w-6 h-6 fill-current" />
                             </motion.div>
                         </div>
-                        <span className="font-display font-bold text-xl tracking-tight text-foreground group-hover:text-rose-600 transition-colors">
+                        <span className="font-display font-medium text-2xl tracking-normal text-foreground group-hover:text-rose-600 transition-colors">
                             ForeverUs
                         </span>
                     </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors"
+                                    className="text-sm font-medium text-gray-800 hover:text-rose-900 transition-colors"
                                 >
                                     {link.name}
                                 </Link>
